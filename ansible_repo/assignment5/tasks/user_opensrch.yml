@@ -1,0 +1,9 @@
+
+- name: Creating a user for opensearch
+  user:
+    name: "{{ item.name }}"
+    state: present 
+    shell: "{{ item.shell}}"
+    create_home: yes
+  loop: "{{ opensearch_user }}" 
+

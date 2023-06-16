@@ -1,0 +1,9 @@
+---
+# handlers file for assignment5
+  - name: config completed
+    become: true
+    systemd:
+      name: opensearch
+      state: started
+      enabled: yes
+      daemon_reload: yes

@@ -1,0 +1,26 @@
+---
+# tasks file for assignment5
+- name: Creating a user for opensearch
+  include_tasks: user_opensrch.yml
+
+- name: making directory for opensearch
+  include_tasks: opensrch_dir.yml
+
+- name: install dependencies for opensearch
+  include_tasks: dependecies_opensrch.yml
+
+- name: Download opensearch
+  include_tasks: downloadopensearch.yml
+    
+  
+- name: extracting opensearch
+  include_tasks: extracting.yml
+
+#- name: installing opensearch
+#  include_tasks: install_os.yml
+
+- name: configuring opensearch
+  include_tasks: configure_opensrch.yml
+
+- name: install dashboard
+  include_taks: dashboard.yml

@@ -1,0 +1,22 @@
+---
+# vars file for assignment5
+#url: https://artifacts.opensearch.org/releases/bundle/opensearch/1.1.0/opensearch-1.1.0-linux-x64.tar.gz
+
+tool_version:  1.2.0
+
+opensearch_user: 
+  - name: opensearch
+    shell: /bin/false
+   
+os_home: ubuntu 
+
+opensrch_dir:
+  - name: opensearch
+    group: opensearch
+    owner: opensearch
+    mode: 0777
+
+opensearchworking_dir: /home/ubuntu/opensearch
+
+opensearch_exec: /home/ubuntu/opensearch/opensearch-1.2.0/bin/opensearch
+

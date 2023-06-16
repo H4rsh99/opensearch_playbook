@@ -1,0 +1,11 @@
+[temp]
+temp ansible_user=ubuntu ansible_host=54.226.24.41 
+
+[test]
+testing ansible_user=ubuntu ansible_host=54.172.10.88
+
+[big]
+big_Server ansible_user=ubuntu ansible_host=34.228.26.240
+
+[bigger]
+bigger ansible_user=ubuntu ansible_host=18.212.232.38

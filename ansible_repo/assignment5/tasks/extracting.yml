@@ -1,0 +1,4 @@
+- name: extracting opensearch
+  become: true
+  shell: cd /home/ubuntu/opensearch && tar -xf opensearch-{{ tool_version }}-linux-x64.tar.gz
+

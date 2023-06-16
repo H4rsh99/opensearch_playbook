@@ -1,0 +1,11 @@
+- name: Download opensearch dashboard
+  get_url: 
+    url: https://artifacts.opensearch.org/releases/bundle/opensearch-dashboards/2.8.0/opensearch-dashboards-2.8.0-linux-x64.deb
+    dest: /home/{{ os_home }}/opensearch
+
+- name: install dashboard
+  command: sudo dpkg -i opensearch-dashboards-2.8.0-linux-x64.deb
+
+
+- name: enable opensearch dashboard
+  command: sudo systemctl daemon-reload | sudo systemctl enable opensearch-dashboards | sudo systemctl start opensearch-dashboards

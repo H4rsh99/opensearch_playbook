@@ -1,0 +1,12 @@
+  - name: Set execute permissions on the script
+    file:
+      path: /home/ubuntu/opensearch/opensearch-1.2.0/opensearch-tar-install.sh
+      mode: +x
+        
+  - name: installing opensearch
+    become: true
+    become_user: opensearch
+    become_method: sudo
+    shell: ./opensearch-tar-install.sh
+    args:
+      chdir: /home/ubuntu/opensearch/opensearch-1.2.0

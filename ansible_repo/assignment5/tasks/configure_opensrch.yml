@@ -1,0 +1,6 @@
+- name: configuring opensearch
+  copy:
+    src: /home/dell/ansible/assignment5/templates/opensearch.service
+    dest: /etc/systemd/system/opensearch.service
+  notify:
+    - config completed

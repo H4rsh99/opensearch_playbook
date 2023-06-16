@@ -1,0 +1,5 @@
+ 
+ - name: Download opensearch
+   get_url: 
+    url: https://artifacts.opensearch.org/releases/bundle/opensearch/{{ tool_version }}/opensearch-{{ tool_version }}-linux-x64.tar.gz
+    dest: /home/{{ os_home }}/opensearch

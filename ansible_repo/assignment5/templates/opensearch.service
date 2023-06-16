@@ -1,0 +1,17 @@
+[Unit]
+Description=OpenSearch Service
+After=syslog.target network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/ubuntu/opensearch
+ExecStart=/home/ubuntu/opensearch/opensearch-1.2.0/bin/opensearch
+Restart=always
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=opensearch
+
+[Install]
+WantedBy=multi-user.target
+
+

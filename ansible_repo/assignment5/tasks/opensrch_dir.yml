@@ -1,0 +1,21 @@
+---
+- name: Making a directory for opensearch
+  file: 
+    path: /home/{{ os_home }}/{{ item.name }}
+    owner: "{{ item.owner }}"
+    group: "{{ item.group }}"
+    mode: "{{ item.mode }}"
+    state: directory
+  loop: "{{ opensrch_dir }}"
+  when: "ansible_os_family == 'Debian'"
+
+
+- name: Making a directory for opensearch
+  file:
+    path: "/home/{{ os_home }}/{{ item.name }}"
+    owner: "{{ item.owner }}"
+    group: "{{ item.group }}"
+    mode: "{{ item.mode }}"
+    state: directory
+  loop: "{{ opensrch_dir }}"
+  when: "ansible_os_family == 'RedHat'"
